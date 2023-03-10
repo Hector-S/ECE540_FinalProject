@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Mar  2 19:28:34 2023
+# Process ID: 3832
+# Current directory: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7572 D:\Users\Hector\Desktop\Winter_2023\ECE_540\Labs\FinalProject\Vivado\Vivado.xpr
+# Log file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/vivado.log
+# Journal file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

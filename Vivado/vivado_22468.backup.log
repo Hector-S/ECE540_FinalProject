@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Mar  9 16:38:04 2023
+# Process ID: 22468
+# Current directory: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28804 D:\Users\Hector\Desktop\Winter_2023\ECE_540\Labs\FinalProject\Vivado\Vivado.xpr
+# Log file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/vivado.log
+# Journal file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/tower/pic4.coe'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/synth_1/vivado.pb' contains 20538 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20539' and re-open the project.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 817.332 ; gain = 210.168
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_10m -dir d:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {clk_10m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {15.625} CONFIG.MMCM_CLKIN1_PERIOD {10.000} CONFIG.MMCM_CLKIN2_PERIOD {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {78.125} CONFIG.CLKOUT1_JITTER {290.478} CONFIG.CLKOUT1_PHASE_ERROR {133.882}] [get_ips clk_10m]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'clk_10m' to 'clk_10m' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.srcs/sources_1/ip/clk_10m/clk_10m.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_10m'...
+generate_target all [get_files  d:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.srcs/sources_1/ip/clk_10m/clk_10m.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_10m'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_10m'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_10m'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_10m'...
+catch { config_ip_cache -export [get_ips -all clk_10m] }
+export_ip_user_files -of_objects [get_files d:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.srcs/sources_1/ip/clk_10m/clk_10m.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.srcs/sources_1/ip/clk_10m/clk_10m.xci]
+launch_runs -jobs 8 clk_10m_synth_1
+[Thu Mar  9 18:02:07 2023] Launched clk_10m_synth_1...
+Run output will be captured here: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/clk_10m_synth_1/runme.log
+export_simulation -of_objects [get_files d:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.srcs/sources_1/ip/clk_10m/clk_10m.xci] -directory D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.ip_user_files/sim_scripts -ip_user_files_dir D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.ip_user_files -ipstatic_source_dir D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.cache/compile_simlib/modelsim} {questa=D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.cache/compile_simlib/questa} {riviera=D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.cache/compile_simlib/riviera} {activehdl=D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet

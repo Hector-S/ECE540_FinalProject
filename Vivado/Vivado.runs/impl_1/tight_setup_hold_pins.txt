@@ -1,0 +1,19 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|         clk_31_5_clk_315 |                 clk_core |                                                                          swervolf/vga/wb_output_reg[10]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[6]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[7]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[5]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[4]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[3]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[9]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[8]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                          swervolf/vga/wb_output_reg[11]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[1]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[0]/D|
+|         clk_31_5_clk_315 |                 clk_core |                                                                           swervolf/vga/wb_output_reg[2]/D|
+|                 clk_core |                 clk_core |                              swervolf/swerv_eh1/swerv/lsu/lsu_lsc_ctl/lsu_result_corr_dc4ff/dout_reg[1]/D|
+|                 clk_core |                 clk_core |                                  swervolf/swerv_eh1/swerv/exu/div_e1/qff/genblock.dff/dffs/dout_reg[16]/D|
+|                 clk_core |                 clk_core |                              swervolf/swerv_eh1/swerv/dec/instbuff/pc1ff/genblock.dff/dffs/dout_reg[15]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

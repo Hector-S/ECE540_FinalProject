@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Mar  6 22:25:07 2023
+# Process ID: 17512
+# Current directory: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/ROM_Player_synth_1
+# Command line: vivado.exe -log ROM_Player.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROM_Player.tcl
+# Log file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/ROM_Player_synth_1/ROM_Player.vds
+# Journal file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/ROM_Player_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ROM_Player.tcl -notrace

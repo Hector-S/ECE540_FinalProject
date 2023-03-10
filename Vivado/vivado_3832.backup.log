@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Mar  2 19:28:34 2023
+# Process ID: 3832
+# Current directory: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7572 D:\Users\Hector\Desktop\Winter_2023\ECE_540\Labs\FinalProject\Vivado\Vivado.xpr
+# Log file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/vivado.log
+# Journal file: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/synth_1/vivado.pb' contains 20538 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20539' and re-open the project.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 831.281 ; gain = 206.609
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar  2 19:30:18 2023] Launched synth_1...
+Run output will be captured here: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/synth_1/runme.log
+[Thu Mar  2 19:30:18 2023] Launched impl_1...
+Run output will be captured here: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/impl_1/runme.log
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/synth_1/vivado.pb' contains 20538 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20539' and re-open the project.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Mar  2 21:42:55 2023] Launched synth_1...
+Run output will be captured here: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/synth_1/runme.log
+[Thu Mar  2 21:42:55 2023] Launched impl_1...
+Run output will be captured here: D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/impl_1/runme.log
+CRITICAL WARNING: [Common 17-1649] The Vivado message database 'D:/Users/Hector/Desktop/Winter_2023/ECE_540/Labs/FinalProject/Vivado/Vivado.runs/synth_1/vivado.pb' contains 20538 messages. Restoring all messages from this message database will impact Vivado performance, so only WARNING, CRITICAL WARNING, and ERROR messages will be restored. To restore all messages from this file use the tcl command 'set_param messaging.loadPbLimit 20539' and re-open the project.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  2 22:13:06 2023...

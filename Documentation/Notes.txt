@@ -1,0 +1,62 @@
+---| Graphics Module |---
+Can have up to 16 registers
+Resolution: 320 x 240
+RGB
+
+Two Frame Buffers. Can only have 1 selected at a time.
+Selected Frame Buffer outputs video and can't be read or written to.
+Runs at clk speed of 31.5 hz.
+UNselected Frame Buffer can be read or written to.
+Runs at clk speed of wishbone.
+
+1-bit Frame Select Register | 0-
+
+17-bit Pixel Address Register | 1-
+
+12-bit Pixel Data Out Register | 2-
+Blue is MSB. Red is LSB.
+
+12-bit Pixel Data In Register | 3-
+
+//Before swapping frames, change Pixel Address to be out of bounds so no frame data is overwritten.
+
+0 = 0 \ 0 0
+1 = 0 | 1 0
+2 = 1 | 0 0
+3 = 1 | 1 0
+
+638 = 319 | 0 0
+639 = 319 | 1 0
+640 = 0   \ 0 1
+641 = 0   \ 1 1
+642 = 1   \ 0 1
+643 = 1   \ 1 1
+1278 = 319 | 0 1
+1279 = 319 | 1 1
+1280 = 320 | 0 0
+
+---| Sprite Pixel Data Register |---
+DataOut [15:0] = 16 bits
+256 pixels each = 8-bit Address.
+
+---| SPDR Location Address |---
+//Stores location of top-left-most pixel position.
+
+
+--| 32 Simultaneous SPDRs |--
+Have 32 sprites.
+
+---| PBR Clock Milli |---
+10 mhz = 10,000,000 //10 million cycles a second.
+Need 2^24 bits to hold 10 million.
+2^32 holds up to 429 seconds.
+When clock hits 0x989680, we've hit 1 second.
+100,000 cycles every 0.01 seconds.
+When we hit 100,000, 1 millisecond has passed.
+0x186A0
+
+
+---| Rotate an Image |---
+http://datagenetics.com/blog/august32013/index.html
+https://www.reddit.com/r/programming/comments/1kjnb5/rotating_images/
+

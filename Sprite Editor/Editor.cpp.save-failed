@@ -1,0 +1,86 @@
+#include "Editor.h"
+
+/*
+    CONSTUCTOR
+*/
+Editor::Editor()
+{
+    Sprite = new int16_t[Width*Height];
+    for(int i = 0; i < Height; ++i) //Set every pixel in sprite equal to zero.
+    {
+        for(int j = 0; j < Width; ++j)
+        {
+            SPR_PIX(j,i) = 0x0000;
+        }
+    }
+}
+
+/*
+    DESTRUCTOR
+*/
+Editor::~Editor()
+{
+
+}
+
+uint8_t Editor::FourToEightBit(uint8_t Value)
+{
+    return Value / 15.0 * 255;
+}
+
+void Editor::Render(SDL_Renderer* Renderer, int ResW, int ResH)
+{
+    if(!Renderer){return;}
+    int XOffset = (ResW - Width*Zoom) / 2;
+    int YOffset = (ResH - Height*Zoom) / 2;
+    int PixelSize = 1*Zoom;
+    uint16_t BackgroundPixel[2];
+    BackgroundPixel[0] = 0x4FFF; //White.
+    BackgroundPixel[1] = 0x4888; //Gray.
+    uint8_t r = 0, g = 0, b = 0, a = 0;
+    bool BackWhite = true;
+
+    SDL_GetRenderDrawColor(Renderer, &r, &g, &b, &a); //Save render draw color.
+    for(int i = 0; i < Height; ++i)
+    {
+        BackWhite = !BackWhite;
+        for(int j = 0; j < Width; ++j)
+        {
+            SDL_Rect Rect = {(int)(XOffset + j*PixelSize), (int)(YOffset + i*PixelSize), PixelSize, PixelSize};
+            BackWhite = !BackWhite;
+            //Draw background pixel pattern color.
+            SDL_SetRenderDrawColor(Renderer,
+                                   FourToEightBit(BackgroundPixel[BackWhite] & 0x000F),
+                                   (FourToEightBit(BackgroundPixel[BackWhite] >> 4 & 0x000F)),
+                                   (FourToEightBit(BackgroundPixel[BackWhite] >> 8 & 0x000F)),
+                                   (FourToEightBit(BackgroundPixel[BackWhite] >> 12 & 0x000F)));
+            SDL_RenderFillRect(Renderer, &Rect);
+            //Draw Pixel color.
+            SDL_SetRenderDrawColor(Renderer,
+                                   FourToEightBit(SPR_PIX(j,i)),
+                                   FourToEightBit(SPR_PIX(j,i) >> 4),
+                                   FourToEightBit(SPR_PIX(j,i) >> 8),
+                                   FourToEightBit(SPR_PIX(j,i) >> 12)); //Set color to black.
+            SDL_RenderFillRect(Renderer, &Rect);
+        }
+    }
+    SDL_SetRenderDrawColor(Renderer, r, g, b, a); //Restore render draw color.
+    return;
+}
+
+/*
+    Will paint a pixel at the given mouse coordinates if possible.
+*/
+void Editor::Paint(int MouseX, int MouseY, int ResW, int ResH)
+{
+    int XOffset = (ResW - Width*Zoom) / 2;
+    int YOffset = (ResH - Height*Zoom) / 2;
+    int PixelSize = 1*Zoom;
+    if((MouseX < XOffset) || (MouseX > XOffset + (PixelSize*Width)) || (MouseY < YOffset) || (MouseY > YOffset + (PixelSize*Height))){return;}
+    int XCoordinate = MouseX ./ (Width * PixelSize) * Width;
+    int YCoordinate = MouseY ./ (Height * PixelSize) * Height;
+
+    return;
+}
+
+
